@@ -1,7 +1,7 @@
 package step;
 
 abstract class Price {
-    abstract int getPriceCode();
+    abstract MovieType getMovieType();
 
     abstract double getCharge(int daysRented);
 

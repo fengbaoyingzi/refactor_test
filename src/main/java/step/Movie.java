@@ -1,27 +1,24 @@
 package step;
 
 public class Movie {
-	public static final int CHILDREN = 2;
-	public static final int REGULAR = 0;
-	public static final int NEW_RELEASE = 1;
 	private String _title;
 	private Price _price;
 
-	public Movie(String title, int priceCode) {
+	public Movie(String title, MovieType movieType) {
 		_title = title;
-		setPriceCode(priceCode);
+		setMovieType(movieType);
 	}
 
-	public int getPriceCode() {
-		return _price.getPriceCode();
+	public MovieType getMovieType() {
+		return _price.getMovieType();
 	}
 
 	public String getTitle() {
 		return _title;
 	}
 
-	public void setPriceCode(int priceCode) {
-		switch (priceCode){
+	public void setMovieType(MovieType movieType) {
+		switch (movieType){
 			case REGULAR:
 				_price = new RegularPrice();
 				break;

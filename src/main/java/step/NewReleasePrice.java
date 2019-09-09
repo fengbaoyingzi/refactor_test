@@ -1,8 +1,8 @@
 package step;
 
 public class NewReleasePrice extends Price {
-    int getPriceCode() {
-        return Movie.NEW_RELEASE;
+    MovieType getMovieType() {
+        return MovieType.NEW_RELEASE;
     }
 
     double getCharge(int daysRented) {

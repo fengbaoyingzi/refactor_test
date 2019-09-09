@@ -1,8 +1,8 @@
 package step;
 
 public class ChildrenPrice extends Price {
-    int getPriceCode() {
-        return Movie.CHILDREN;
+    MovieType getMovieType() {
+        return MovieType.CHILDREN;
     }
 
     double getCharge(int daysRented) {

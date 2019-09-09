@@ -5,15 +5,15 @@ public class Movie {
 	public static final int REGULAR = 0;
 	public static final int NEW_RELEASE = 1;
 	private String _title;
-	private int _priceCode;
+	private Price _price;
 
 	public Movie(String title, int priceCode) {
 		_title = title;
-		_priceCode = priceCode;
+		setPriceCode(priceCode);
 	}
 
 	public int getPriceCode() {
-		return _priceCode;
+		return _price.getPriceCode();
 	}
 
 	public String getTitle() {
@@ -21,7 +21,17 @@ public class Movie {
 	}
 
 	public void setPriceCode(int priceCode) {
-		_priceCode = priceCode;
+		switch (priceCode){
+			case REGULAR:
+				_price = new RegularPrice();
+				break;
+			case CHILDREN:
+				_price = new ChildrenPrice();
+				break;
+			case NEW_RELEASE:
+				_price = new NewReleasePrice();
+				break;
+		}
 	}
 
 	public double getCharge(int daysRented){

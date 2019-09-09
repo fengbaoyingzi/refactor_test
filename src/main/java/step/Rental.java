@@ -28,7 +28,7 @@ public class Rental {
             case Movie.NEW_RELEASE:
                 result += getDaysRented() * 3;
                 break;
-            case Movie.CHILDRENS:
+            case Movie.CHILDREN:
                 result += 1.5;
                 if (getDaysRented() > 3)
                     result += (getDaysRented() - 3) * 1.5;

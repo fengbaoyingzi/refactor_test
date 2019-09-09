@@ -27,11 +27,11 @@ public class Customer {
             Rental each = (Rental) rentals.nextElement();
 
             result += "\t" + each.getMovie().getTitle() + "\t"
-                    + String.valueOf(each.getCharge()) + "\n";
+                    + each.getCharge() + "\n";
         }
 
-        result += "Amount owed is " + String.valueOf(getTotalAmount()) + "\n";
-        result += "You earned " + String.valueOf(getTotalFrequentRenterPoints())
+        result += "Amount owed is " + getTotalAmount() + "\n";
+        result += "You earned " + getTotalFrequentRenterPoints()
                 + " frequent renter points";
         return result;
     }

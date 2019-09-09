@@ -31,8 +31,7 @@ public class CustomerTest1 {
 		Movie movie = new Movie("Spider-Man", 1);
 		Rental rental = new Rental(movie, 3);
 		double result = rental.getCharge();
-		double expection = 9.0;
-		Assert.assertEquals(result, expection);
+		Assert.assertEquals(result, 9.0);
 	}
 
 	@Test
@@ -40,13 +39,11 @@ public class CustomerTest1 {
 		Movie movie = new Movie("Big-Hero-6", 2);
 		Rental rental = new Rental(movie, 4);
 		double result = rental.getCharge();
-		double expection = 3.0;
-		Assert.assertEquals(result, expection);
+		Assert.assertEquals(result, 3.0);
 
 		Rental rental2 = new Rental(movie, 3);
 		double result2 = rental2.getCharge();
-		double expection2 = 1.5;
-		Assert.assertEquals(result2, expection2);
+		Assert.assertEquals(result2, 1.5);
 	}
 
 	@Test
@@ -54,12 +51,18 @@ public class CustomerTest1 {
 		Movie movie = new Movie("Iron-Man", 0);
 		Rental rental = new Rental(movie, 5);
 		double result = rental.getCharge();
-		double expection = 6.5;
-		Assert.assertEquals(result, expection);
+		Assert.assertEquals(result, 6.5);
 
 		Rental rental2 = new Rental(movie, 1);
 		double result2 = rental2.getCharge();
-		double expection2 = 2.0;
-		Assert.assertEquals(result2, expection2);
+		Assert.assertEquals(result2, 2.0);
+	}
+
+	@Test
+	public void testGetFrequentRenterPoints() {
+		Movie movie = new Movie("Iron-Man", 0);
+		Rental rental = new Rental(movie, 5);
+		int result = rental.getFrequentRenterPoints();
+		Assert.assertEquals(result, 1);
 	}
 }

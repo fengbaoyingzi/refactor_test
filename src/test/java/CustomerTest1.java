@@ -61,7 +61,5 @@ public class CustomerTest1 {
 		double result2 = rental2.getCharge();
 		double expection2 = 2.0;
 		Assert.assertEquals(result2, expection2);
-
-
 	}
 }
